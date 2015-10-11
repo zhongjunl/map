@@ -4,7 +4,7 @@ var dgram = require('dgram');
 var server = dgram.createSocket('udp4');
 var fs = require('fs');
 
-var start = new Date().getSeconds();
+var start = new Date().getMilliseconds() / 1000;
 var sourceArr = [];
 var bakArr = [];
 
@@ -14,16 +14,14 @@ server.on('listening', function () {
 });
 
 server.on('message', function (message, remote) {
-  console.log(remote.address + ':' + remote.port + ' - ' + message);
-
   var data = message;
-  var curr = new Date().getSeconds();
+  var curr = new Date().getMilliseconds() / 1000;
   if (curr - start > 30) {
     start = curr;
     bakArr = sourceArr;
     sourceArr = [];
 
-    fs.writeFile('data.txt', bakArr, function (err) {
+    fs.writeFile('data.txt', JSON.stringify(bakArr), function (err) {
       if (err) throw err;
       console.log('It\'s saved!');
     });
