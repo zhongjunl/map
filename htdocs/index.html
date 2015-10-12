@@ -2,11 +2,34 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="UTF-8">
     <title id="title">2015云栖大会参会人员热力分布图</title>
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./reset-supplement.css">
-    <link rel="stylesheet" href="./hot-map.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./reset-supplement.css">
+  <link rel="stylesheet" href="./hot-map.css">
   </head>
   <body>
+    <ul class="operator">
+      <li>
+        <button id="fullscreenBtn" type="button" class="btn btn-success">进入全屏模式</button>
+      </li>
+      <li>
+        <select id="switchList" class="form-control">
+          <option value="0">国际会展中心一层</option>
+          <option value="1">国际会展中心二层</option>
+          <option value="2">国际会展中心三层</option>
+          <option value="3">中大C1一楼</option>
+          <option value="4">中大C1二楼</option>
+          <option value="5">中大C1三楼</option>
+          <option value="6">中大C1四楼</option>
+          <option value="7">中大C2一楼</option>
+          <option value="8">中大C3一楼</option>
+          <option value="9">中大C3二楼</option>
+          <option value="10">中大C3三楼</option>
+          <option value="11">中大C3四楼</option>
+          <option value="12">中大C4一楼</option>
+          <option value="13">中大C6一楼</option>
+        </select>
+      </li>
+    </ul>
     <ol id="tabContainer" class="tab-container">
       <li>
         <div class="mod-pavilion">

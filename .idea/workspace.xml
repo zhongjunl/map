@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbf62745-24bb-4d7a-bcbb-e2a316bc2068" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/index.html" afterPath="$PROJECT_DIR$/htdocs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C1-1_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C1-1_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C1-2_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C1-2_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C1-3_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C1-3_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C1-4_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C1-4_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C2-1_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C2-1_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C3-1_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C3-1_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C3-2_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C3-2_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C3-3_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C3-3_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C3-4_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C3-4_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C4-1_150_150.png" afterPath="$PROJECT_DIR$/htdocs/img/C4-1_150_150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/C6-1_150_300.png" afterPath="$PROJECT_DIR$/htdocs/img/C6-1_150_300.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/国际会展中心一层_150_350.png" afterPath="$PROJECT_DIR$/htdocs/img/国际会展中心一层_150_350.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/国际会展中心三层_150_400.png" afterPath="$PROJECT_DIR$/htdocs/img/国际会展中心三层_150_400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/国际会展中心二层_150_400.png" afterPath="$PROJECT_DIR$/htdocs/img/国际会展中心二层_150_400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/img/平面图_150_2950.png" afterPath="$PROJECT_DIR$/htdocs/img/平面图_150_2950.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/hot-map.css" afterPath="$PROJECT_DIR$/htdocs/hot-map.css" />
     </list>
     <ignored path="map.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +40,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1421801">
+            <state vertical-scroll-proportion="-1.7647059">
               <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hot-map.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/htdocs/hot-map.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.64122134">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -44,6 +69,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/htdocs/index.html" />
+        <option value="$PROJECT_DIR$/htdocs/hot-map.css" />
       </list>
     </option>
   </component>
@@ -216,8 +242,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/htdocs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1421801">
+        <state vertical-scroll-proportion="-1.7647059">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/hot-map.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64122134">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
           <folding />
         </state>
       </provider>
