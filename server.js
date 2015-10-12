@@ -41,8 +41,8 @@ server.on('message', function (message, remote) {
     var macId = data.toString('hex', 16, 22);
     sourceMap[macId] = {
       mapId: data.readIntBE(4, 4),
-      x: data.readFloatBE(30),
-      y: data.readFloatBE(34)
+      x: data.readFloatBE(30).toFixed(3),
+      y: data.readFloatBE(34).toFixed(3)
     };
   }
 });
