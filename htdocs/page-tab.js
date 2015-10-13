@@ -12,6 +12,7 @@
         screenWidth = window.screen.width,
         screenHeight = window.screen.height,
         timer = null,
+        intervalTimer = null,
         demos = [],
         imgMap = {
             '6095' : '国际会展中心一层_150_350',
@@ -47,7 +48,6 @@
                 },
                 1000,function(){
                     var childrenEls = tabContainer.children();
-                    console.info(currentIndex+' -> '+(currentIndex+step));
                     for(var i= 0;i<step;i++){
                         childrenEls.eq(i).appendTo(tabContainer);
                     }
@@ -64,12 +64,20 @@
         },
         stay = function(){
             free();
-            timer = setTimeout(move,5000);
+            timer = setTimeout(move,30000);
+            freeInterval();
+            intervalTimer = setInterval(getData,1000);
         },
         free = function(){
             if(timer){
                 clearTimeout(timer);
                 timer = null;
+            }
+        },
+        freeInterval = function(){
+            if(intervalTimer){
+                clearInterval(intervalTimer);
+                intervalTimer = null;
             }
         },
         getData = function(){
