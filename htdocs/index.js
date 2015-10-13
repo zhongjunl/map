@@ -5,7 +5,7 @@ function Demo(container,imgName,data) {
   this.container = container;
   this.imgName = imgName || '';
   this.data = data || [];
-  this.clearAlpha = 0.6, this.size = 40, this.intensity = 0.4;
+  this.clearAlpha = 0.0, this.size = 40, this.intensity = 0.7;
   this.initMap();
   // this.initVisual();
   //
