@@ -39,7 +39,7 @@ server.on('message', function (message, remote) {
     var tempMap = {};
     var item;
     
-    for (int j = 0; j < tempArr.length; j ++) {
+    for (var j = 0; j < tempArr.length; j ++) {
       item = tempArr[j];
       tempMap[item.macId] = item;
     }
