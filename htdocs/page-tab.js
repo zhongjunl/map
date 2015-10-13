@@ -6,6 +6,8 @@
 (function($){
     var tabContainer = $('#tabContainer'),
         items = tabContainer.children(),
+        fullscreenBtn = $('#fullscreenBtn'),
+        switchList = $('#switchList'),
         currentIndex = 0,
         screenWidth = window.screen.width,
         screenHeight = window.screen.height,
@@ -37,23 +39,38 @@
             tabContainer.width(screenWidth);
             tabContainer.height(screenHeight);
         },
-        move = function () {
+        move = function (step) {
+            step = step || 1;
             tabContainer.animate(
                 {
-                    scrollTop:screenHeight
+                    scrollTop:screenHeight*step
                 },
                 1000,function(){
-                    currentIndex = (currentIndex+1)%tabContainer.children().length;
+                    var childrenEls = tabContainer.children();
+                    console.info(currentIndex+' -> '+(currentIndex+step));
+                    for(var i= 0;i<step;i++){
+                        childrenEls.eq(i).appendTo(tabContainer);
+                    }
+                    currentIndex = (currentIndex+step)%childrenEls.length;
                     console.info('动画完成，到第'+(currentIndex+1)+'屏了。');
-                    tabContainer.children().eq(0).appendTo(tabContainer);
+
+
                     tabContainer.scrollTop(0);
+                    switchList.val(currentIndex);
                     stay();
                     getData();
                 }
             );
         },
         stay = function(){
-            timer = setTimeout(move,30000);
+            free();
+            timer = setTimeout(move,5000);
+        },
+        free = function(){
+            if(timer){
+                clearTimeout(timer);
+                timer = null;
+            }
         },
         getData = function(){
             var currentContainer = items.eq(currentIndex).find('.content');
@@ -85,8 +102,41 @@
                 demo.render(data);
             }
         },
+        launchIntoFullscreen = function(element) {
+            if(element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if(element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if(element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if(element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        },
+        bindEvents = function(){
+            fullscreenBtn.on('click',function(e){
+                launchIntoFullscreen(document.documentElement);
+            });
+            switchList.on('change',function(e){
+                var el = $(this);
+                switchTo(el.val());
+            });
+            switchList.on('focus',function(e){
+                free();
+            });
+            switchList.on('blur',function(e){
+                stay();
+            });
+        },
+        switchTo = function(id){
+            var index = +id;
+            var l = items.length;
+            var step = (index-currentIndex+l)%l;
+            move(step);
+        },
         init = function(){
             setItemSize();
+            bindEvents();
             if(items.length>1){
                 stay();
             }
