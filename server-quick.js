@@ -10,8 +10,8 @@ var start = null;
 var longArr = [];
 //短周期数据
 var shortArr = [];
-var TIME = 2;
-var LEN = 15;
+var TIME = 1;
+var LEN = 30;
 var inx = 0;
 
 for (var i = 0; i < LEN; i++) {
@@ -44,6 +44,7 @@ server.on('message', function (message, remote) {
       tempMap[item.macId] = item;
     }
 
+    tempArr = [];
     for (var key in tempMap) {
       tempArr.push({
         mapId: tempMap[key].mapId,
@@ -54,7 +55,7 @@ server.on('message', function (message, remote) {
 
     fs.writeFile('htdocs/data.txt', JSON.stringify(tempArr), function (err) {
       if (err) throw err;
-      console.log('It\'s saved!');
+      //console.log('It\'s saved!');
     });
   } else {
     var macId = data.toString('hex', 16, 22);
